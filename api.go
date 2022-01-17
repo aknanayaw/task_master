@@ -23,6 +23,8 @@ func TaskMaster(w http.ResponseWriter, r *http.Request) {
 }
 
 func ListTasks(w http.ResponseWriter, _ *http.Request) {
+	fmt.Println("listing")
+	w.Header().Set("Content-Type", "application/json")
 	tasks := taskCatalogue.TaskList()
 	response := map[string]interface{}{
 		"tasks": tasks,

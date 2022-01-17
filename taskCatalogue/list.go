@@ -4,7 +4,7 @@ import "task_master/task"
 
 func TaskList() (tasks []Task) {
 	var sayhi Task
-	sayhi.Name = "SayHi"
+	sayhi.Name = "say_hi"
 	name := Params{
 		Name: "name",
 		Type: "string",
@@ -13,7 +13,7 @@ func TaskList() (tasks []Task) {
 	tasks = append(tasks, sayhi)
 
 	var laptopgooglesearch Task
-	laptopgooglesearch.Name = "LaptopGoogleSearch"
+	laptopgooglesearch.Name = "laptop_google_search"
 	searchString := Params{
 		Name: "search_string",
 		Type: "string",
@@ -24,9 +24,9 @@ func TaskList() (tasks []Task) {
 }
 
 var TaskCatalogue = map[string]interface{}{
-	"SayHi": task.SayHi,
+	"say_hi": task.SayHi,
 
-	"LaptopGoogleSearch": task.LaptopGoogleSearch}
+	"laptop_google_search": task.LaptopGoogleSearch}
 
 type Task struct {
 	Name       string   `json:"name"`
